@@ -1,5 +1,5 @@
 const Hapi = require('hapi');
-const {expect} = require('code');
+const { expect } = require('code');
 const {
   describe,
   it,

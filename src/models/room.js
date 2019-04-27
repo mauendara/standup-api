@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
 const roomModel = mongoose.Schema({
-  name: {type: String, required: '{PATH} is required!'}
+  name: { type: String, required: '{PATH} is required!' }
 }, {
-  timestamps: true
-});
+    timestamps: true
+  });
 
 module.exports = mongoose.model('Room', roomModel);

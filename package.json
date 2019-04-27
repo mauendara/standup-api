@@ -1,14 +1,13 @@
 {
-  "name": "task-app-backend",
+  "name": "standup-api",
   "version": "1.0.0",
-  "description": "A task app built with Hapi and Mongoose. Part of a tutorial series",
+  "description": "Ejercicio Coding Dojo - Idukay - 2019/04/27",
   "main": "index.js",
   "scripts": {
     "start": "nodemon --no-deprecation src/index.js",
-    "test": "lab --verbose --assert code --coverage",
-    "db:seed": "node src/utils/seed.js"
+    "test": "lab --verbose --assert code --coverage"
   },
-  "author": "Connor Leech",
+  "author": "Mauricio Endara",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "3.0.0",

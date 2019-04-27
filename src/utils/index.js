@@ -10,15 +10,12 @@ const utils = {
         if (err) {
           return reject(err);
         }
-
         bcrypt.hash(password, salt, (err, hash) => {
           if (err) {
             return reject(err);
           }
-
           return resolve(hash);
         });
-
       });
     });
   },
@@ -29,24 +26,19 @@ const utils = {
         if (error) {
           return reject(error);
         }
-
         return resolve(response);
       });
     });
-
   },
 
   async sendVerificationEmail(user) {
     const token = jsonwebtoken.sign(user.email, process.env.SECRET_KEY);
-
     const verificationUrl = `http://${process.env.BASE_URL}/#/confirmation?token=${token}`;
-
     return await emails.sendEmail(user.email, {
-      subject: 'Activate your account',
-      text: `Please click verification url: ${verificationUrl}`
+      subject: 'Activa tu cuenta',
+      text: `Haz click en el siguiente enlace de verificación: ${verificationUrl}`
     });
   },
-
 };
 
 module.exports = utils;
