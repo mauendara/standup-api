@@ -37,32 +37,7 @@ const routes = [
     method: 'DELETE',
     path: '/api/rooms/{id}',
     options: api.room.remove
-  },
-  {
-    method: 'GET',
-    path: '/api/tasks',
-    options: api.task.all
-  },
-  {
-    method: 'GET',
-    path: '/api/tasks/{task}',
-    options: api.task.get
-  },
-  {
-    method: 'POST',
-    path: '/api/tasks',
-    options: api.task.create
-  },
-  {
-    method: 'PUT',
-    path: '/api/task/{task}',
-    options: api.task.update
-  },
-  {
-    method: 'DELETE',
-    path: '/api/tasks/{task}',
-    options: api.task.remove
-  },
+  }
 ];
 
 module.exports = routes;

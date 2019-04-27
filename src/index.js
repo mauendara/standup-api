@@ -22,7 +22,6 @@ const validate = async function (decoded, request) {
   return { isValid: true };
 };
 
-
 const startServer = async () => {
   try {
     await server.register(auth);

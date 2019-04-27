@@ -1,30 +1,30 @@
-const mongoose         = require('mongoose');
-const utils            = require('./../utils');
+const mongoose = require('mongoose');
+const utils = require('./../utils');
 
 const userModel = mongoose.Schema({
-  email: { 
-    type: String, 
-    required: '{PATH} is required!', 
-    index: { unique: true } 
+  email: {
+    type: String,
+    required: '{PATH} is required!',
+    index: { unique: true }
   },
-  password: { 
+  password: {
     type: String,
     default: null
   },
-  active: { 
-    type: Boolean, 
-    default: false 
+  active: {
+    type: Boolean,
+    default: false
   }
 }, {
-  timestamps: true
-});
+    timestamps: true
+  });
 
 userModel.pre('save', function (next) {
-  if (!this.password){
+  if (!this.password) {
     next();
   } else {
     utils.hashPassword(this.password)
-      .then((hash)=>{
+      .then((hash) => {
         this.password = hash;
         next();
       })

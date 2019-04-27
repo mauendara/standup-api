@@ -1,16 +1,5 @@
-Task app with Hapi and MongoDB 
+Ejercicio Coding Dojo - Idukay - 2019/04/27
 ===
-
-> This repo is for getting started building a tech stack with core tools like Node.js, Hapi v17 and MongoDB with Mongoose ORM
-
-Full tutorial that accompanies this code is available [on Medium](https://medium.com/employbl/build-a-task-app-with-hapi-mongodb-and-vue-js-dc05c1bb8778).
-
-
-### Seed some tasks
-
-``` 
-$ node src/utils/seed.js
-```
 
 ### Start server
 
@@ -18,18 +7,22 @@ $ node src/utils/seed.js
 $ npm run start
 ```
 
-### Roadmap
+### Consideraciones
 
-- [ ] Add relationships with [mongoose-autopopulate](https://github.com/mongodb-js/mongoose-autopopulate)
-- [ ] Add [jsonwebtoken](https://jwt.io/) authentication
+Se han utilizado las siguientes librerías:
 
-# Tutorial notes 
+- dotenv para la carga de propiedades desde un archivo .env
+- hapi para la construcción del backed REST
+- hapi-auth-jwt2 como middleware de autenticación con JWT
+- Boom para la construcción de respuestas estándar para servicios REST
+- bluebird como librería de promesas (async/await)
+- bcrypt y jsonwebtoken para el hasheo de contraseñas y generación de tokens de autenticación
+- mailgun-js para consumir el servicio de mailgun para el envío de correos electrónicos
+- mongoose para la conexión y manejo de datos contra MongoDB
 
-> If you run into `dyld: lazy symbol binding failed: Symbol not found` error, then running `npm rebuild bcrypt --build-from-source` will fix it.
+En cuanto a entorno de desarrollo:
 
-- We're using Mailgun because Mandrill is too expensive for what we need right now. No sense paying more than we have to for the same thing!
+- nodemon para hot reload del proyecto
+- lab y code para ejecutar tests y code coverage
 
-- You'll need to [add a domain](https://app.mailgun.com/app/domains/new) to your mailgun account. 
-
-- If so inclined you can generate a super secure secret key using: `node -e "console.log(require('crypto').randomBytes(256).toString('base64'));"`
 
