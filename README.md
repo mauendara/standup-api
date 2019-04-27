@@ -25,4 +25,11 @@ En cuanto a entorno de desarrollo:
 - nodemon para hot reload del proyecto
 - lab y code para ejecutar tests y code coverage
 
+Alcance Completado
+
+- Registro de usuario y envío de correo de confirmación
+- Confirmación de correo y activación de la cuenta
+- Inicio de Sesión y control de acceso a recursos
+- Creación de Salas para reuniones Standup
+
 
