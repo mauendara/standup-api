@@ -9,6 +9,12 @@ $ npm run start
 
 ### Consideraciones
 
+Herramientas:
+
+- VS Code
+- Node 11
+- GitKraken para git-flow
+
 Se han utilizado las siguientes librerías:
 
 - dotenv para la carga de propiedades desde un archivo .env
